@@ -1,0 +1,42 @@
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - bot_challenge
+  - corona_safety
+  - corona_cases_info
+entities:
+  - state
+  - country
+responses:
+  utter_greet:
+  - buttons:
+    - payload: India Corona cases
+      title: India Covid Cases
+    text: "Hi,there"
+
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+- utter_greet
+- utter_happy
+- utter_goodbye
+- corona_cases_action
+- utter_safety
+
+
